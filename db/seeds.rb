@@ -13,11 +13,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-desi = User.create(name: "Desi", email: "des@me.com", fitness_level: "expert", password: "password")
-natty = User.create(name: "Natty", email: "natty@me.com", fitness_level: "expert", password: "password")
-claire = User.create(name: "Claire", email: "claire@me.com", fitness_level: "beginner", password: "password")
-tal = User.create(name: "Natalia", email: "natalia@me.com", fitness_level: "expert", password: "password")
-alicia = User.create(name: "Alicia", email: "alicia@me.com", fitness_level: "mom", password: "password")
+desi = User.create(name: "Desi", email: "des@me.com", password: "password")
+natty = User.create(name: "Natty", email: "natty@me.com", password: "password")
+claire = User.create(name: "Claire", email: "claire@me.com", password: "password")
+tal = User.create(name: "Natalia", email: "natalia@me.com", password: "password")
+alicia = User.create(name: "Alicia", email: "alicia@me.com", password: "password")
 
 bicep = Exercise.create(name: "Bicep Curl", target_area: "Biceps", category: "Stregth")
 roman = Exercise.create(name: "Romanian Deadlift", target_area: "Hamstrings, Glutes", category: "Stregth")
@@ -27,12 +27,12 @@ burpee = Exercise.create(name: "Burpee", target_area: "Full Body", category: "Ca
 
 
 monday = Workout.create(name: "Monday Madness", user: desi)
-WorkoutExercise.create(workout: monday, exercise: bicep, set: 10, reps:3)
-WorkoutExercise.create(workout: monday, exercise: roman, set: 20, reps:2)
-WorkoutExercise.create(workout: monday, exercise: skull, set: 15, reps:4)
+Routine.create(workout: monday, exercise: bicep, sets: 10, reps:3)
+Routine.create(workout: monday, exercise: roman, sets: 20, reps:2)
+Routine.create(workout: monday, exercise: skull, sets: 15, reps:4)
 
 
 back = Workout.create(name: "Back Attack", user: natty)
-WorkoutExercise.create(workout: back, exercise: tuck, set: 10, reps:4)
-WorkoutExercise.create(workout: back, exercise: burpee, set: 20, reps:2)
+Routine.create(workout: back, exercise: tuck, sets: 10, reps:4)
+Routine.create(workout: back, exercise: burpee, sets: 20, reps:2)
 
