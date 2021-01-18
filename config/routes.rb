@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :routines
   resources :exercises
   resources :workouts
-  resources :users
+  resources :users do 
+    resources :workouts, shallow: true
+  end
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

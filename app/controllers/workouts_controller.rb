@@ -7,4 +7,8 @@ class WorkoutsController < ApplicationController
 
     def create
     end
+
+    private
+
+    def workout_params
 end
