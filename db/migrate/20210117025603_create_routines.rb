@@ -3,8 +3,8 @@ class CreateRoutines < ActiveRecord::Migration[6.1]
     create_table :routines do |t|
       t.integer :reps
       t.integer :sets
-      t.belongs_to :workout
-      t.belongs_to :exercise
+      t.belongs_to :workout, foreign_key: true
+      t.belongs_to :exercise, foreign_key: true
 
       t.timestamps
     end
