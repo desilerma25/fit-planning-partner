@@ -1,0 +1,20 @@
+<h1> Create your workout below: </h1>
+
+<%= form_for :workout do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.collection_select :exercise, Exercise.all, :id, :name %>
+    <h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
+
+    <%= f.fields_for :routines do |r| %>
+        <%= r.label :reps %>
+        <%= r.number_field :reps %>
+        
+        <%= r.label :sets %>
+        <%= r.number_field :sets %>
+    <% end %>
+
+    <%= f.submit "Create your workout" %>
+
+<% end %>
