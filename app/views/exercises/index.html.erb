@@ -1,2 +1,9 @@
-<h1> <%= current_user.name %>'s Exercises </h1>
+<h1> Exercises </h1>
+
+
+<%= @exercises.each do |exercise| %>
+    <li>
+    <%= link_to "#{exercise.name}", exercise_path(exercise) %>
+    </li>
+<% end %>
 
