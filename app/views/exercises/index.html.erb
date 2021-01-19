@@ -9,7 +9,7 @@
 
 <%= @exercises.each do |exercise| %>
     <li>
-    <%= link_to "#{exercise.name} (#{exercise.target_area})", exercise_path(exercise) %>
+    <%= link_to "#{exercise.name}", exercise_path(exercise) %>
     </li>
 <% end %>
 
