@@ -1,5 +1,5 @@
 <h1> <%= current_user.name %>'s Workouts: </h1>
 
 <ul> <% current_user.workouts.each do |uw| %>
-    <li> <%= uw.name %> </li>
+    <li> <%= link_to "#{uw.name}", workout_path(uw) %> </li>
 </ul> <% end %>
