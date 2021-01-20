@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
     validates :name, presence: true
     validates :email, presence: true, uniqueness: true
+    validates :password, length: { minimum: 6 }
 
     def self.from_omniauth(response)
         User.find_or_create_by(uid: response[:uid], provider: response[:provider]) do |u|
