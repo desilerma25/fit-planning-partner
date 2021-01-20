@@ -10,11 +10,12 @@
         <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
         <h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
 
-        <%= r.label :reps %>
-        <%= r.number_field :reps %>
-        
         <%= r.label :sets %>
         <%= r.number_field :sets %>
+
+        <%= r.label :reps %>
+        <%= r.number_field :reps %>
+    
     <% end %>
 
     <%= f.submit "Create your workout" %>
