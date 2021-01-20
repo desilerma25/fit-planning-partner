@@ -8,7 +8,6 @@
     <%= f.fields_for :routines do |r| %>
         <h2> Select exercise </h2>
         <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
-        <h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
 
         <%= r.label :sets %>
         <%= r.number_field :sets %>
@@ -17,6 +16,8 @@
         <%= r.number_field :reps %>
     
     <% end %>
+
+    <h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
 
     <%= f.submit "Create your workout" %>
 
