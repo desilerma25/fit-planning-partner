@@ -19,7 +19,7 @@ class ExercisesController < ApplicationController
 
     def index
         if params[:target_area]
-            @exercises = Exercise.find_by_target_area(params[:target_area])
+            @exercises = Exercise.find_by_target_area(params[:target_area]).order_by_name
         else
             @exercises = Exercise.order_by_name
         end
