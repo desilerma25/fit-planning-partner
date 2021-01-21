@@ -15,7 +15,7 @@ Specs:
 - [x] Include third party signup/login (Google OmniAuth2)
 - [x] Include nested resource show or index (URL e.g. users/2/workouts)
 - [x] Include nested resource "new" form (URL e.g. users/1/workouts/new)
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x] Include form display of validation errors
 
 Confirm:
 - [ ] The application is pretty DRY
