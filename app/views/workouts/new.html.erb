@@ -1,5 +1,7 @@
 <h1> Create your workout below: </h1>
 
+<%= render '/layouts/errors', object: @workout %>
+
 <%= form_for [@user, @workout] do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
