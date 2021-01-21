@@ -7,4 +7,5 @@ class Exercise < ApplicationRecord
 
     scope :find_by_target_area, -> (muscle) { where("target_area LIKE ?", "%#{muscle}%")}
     scope :order_by_name, -> { order("lower(name) ASC") }
+    # scope :unique_targets, -> { self.uni(:target_area) }
 end
