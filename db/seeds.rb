@@ -1,5 +1,4 @@
 Exercise.create(name: "Ab Crunch Machine", target_area: "Abdominal (Core)", category: "Strength")
-Exercise.create(name: "Adductor", target_area: "Adductors (Legs)", category: "Strength")
 Exercise.create(name: "Alternate Hammer Curl", target_area: "Biceps (Arms)", category: "Strength")
 Exercise.create(name: "Alternating Cable Shoulder Press", target_area: "Deltoids (Deltoids (Shoulders))", category: "Strength")
 Exercise.create(name: "Alternating Kettlebell Row", target_area: "Middle Back", category: "Strength")
