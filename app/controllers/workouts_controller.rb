@@ -20,11 +20,21 @@ class WorkoutsController < ApplicationController
         @workout = Workout.find(params[:id])
     end
 
+    def edit
+        @workout = Workout.find(params[:id])
+    end
+
     def update
-        # @workout = Workout.find(params[:id])
+        @workout = Workout.find(params[:id])
         # unauthorized_workout_user
-        # @workout.update(workout_params)
-        # redirect_to '/workouts/#{'
+        @workout.update(workout_params)
+        redirect_to workout_path(@workout)
+    end
+
+    def destroy
+        @workout = Workout.find(params[:id])
+        @workout.delete
+        redirect_to user_workouts_path 
     end
 
     private

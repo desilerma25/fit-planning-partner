@@ -8,10 +8,10 @@
     <%= f.text_field :name %>
 
     <%= f.label :target_area %>
-    <%= f.collection_select :target_area, Exercise.all, :target_area, :target_area %>
-
+    <%= f.collection_select :target_area, Exercise.unique_targets, :target_area, :target_area %>
+ 
     <%= f.label :category %>
-    <%= f.text_field :category %>
+    <%= f.collection_select :category, Exercise.unique_categories, :category, :category %>
 
     <%= f.submit "Create your exercise!" %>
 
