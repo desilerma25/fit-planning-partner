@@ -1,4 +1,4 @@
-<h1> Your New Exercise </h1>
+<h1> Exercise Info </h1>
 <ul>
     <li> <h3> Exercise: </h3> 
     <%= @exercise.name %> 
@@ -11,5 +11,10 @@
     <li> <h3> Category: </h3> 
     <%= @exercise.category %> 
     </li> 
-
 </ul>
+<!---
+DOES NOT WORK
+    <% if !current_user %>
+    <%= link_to "Edit Exercise", edit_exercise_path(@exercise) %>
+    <% end %>
+-->

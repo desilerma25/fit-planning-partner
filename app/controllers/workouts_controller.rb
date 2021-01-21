@@ -20,9 +20,22 @@ class WorkoutsController < ApplicationController
         @workout = Workout.find(params[:id])
     end
 
+    def update
+        # @workout = Workout.find(params[:id])
+        # unauthorized_workout_user
+        # @workout.update(workout_params)
+        # redirect_to '/workouts/#{'
+    end
+
     private
 
     def workout_params
         params.require(:workout).permit(:user_id, :name, routines_attributes: [:reps, :sets, :exercise_id])
     end
+
+    # def unauthorized_workout_user
+    #     if @exercise.user != current_user
+    #         redirect_to "/exercises"
+    #     end
+    # end
 end

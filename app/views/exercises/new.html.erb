@@ -8,7 +8,7 @@
     <%= f.text_field :name %>
 
     <%= f.label :target_area %>
-    <%= f.collection_select :target_area, Exercise.all, :id, :target_area %>
+    <%= f.collection_select :target_area, Exercise.all, :target_area, :target_area %>
 
     <%= f.label :category %>
     <%= f.text_field :category %>
