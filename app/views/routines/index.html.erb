@@ -1,1 +1,8 @@
 INDEX
+<% @routines.each do |r| %>
+<li>
+    <%= r.exercise.name %>
+    <%= r.sets %>
+    <%= r.reps %>
+</li>
+<% end %>
