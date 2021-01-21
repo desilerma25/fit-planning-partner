@@ -13,9 +13,27 @@
     </li> 
 </ul>
 
-<% @exercise.workouts %>
+<h4>This exercise is used in <%= @exercise.workouts.count %> workouts</h4>
+
+<br>
+<% @exercise.workouts.each do |e| %>
+<li>
+    <%= link_to "#{e.name}", workout_path(e) %>
+</li>
+<% end %>
+
 
 <!---
-play with relationship above
+
+<h5> This exercise is used in your workouts <%= @exercise.workouts.count %> times </h5>
+
+play with relationship 
+
+This works, but needs scope to get unique:
+
+<% @exercise.workouts.each do |e| %>
+    <%= e.name %>
+<% end %>
+
 
 -->
