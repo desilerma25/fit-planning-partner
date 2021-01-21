@@ -25,27 +25,29 @@ class WorkoutsController < ApplicationController
     end
 
     def update
+        # byebug
         @workout = Workout.find(params[:id])
-        # unauthorized_workout_user
+        # unauthorized_workout_user 
+        # byebug
         @workout.update(workout_params)
         redirect_to workout_path(@workout)
     end
 
     def destroy
         @workout = Workout.find(params[:id])
-        @workout.delete
-        redirect_to user_workouts_path 
+        @workout.destroy
+        redirect_to user_workouts_path(current_user) 
     end
 
     private
 
     def workout_params
-        params.require(:workout).permit(:user_id, :name, routines_attributes: [:reps, :sets, :exercise_id])
+        params.require(:workout).permit(:id, :user_id, :name, routines_attributes: [:reps, :sets, :exercise_id])
     end
 
     # def unauthorized_workout_user
-    #     if @exercise.user != current_user
-    #         redirect_to "/exercises"
+    #     if @workout.user_id != current_user
+    #         redirect_to root
     #     end
     # end
 end
