@@ -2,13 +2,13 @@
 
 
 
-<%= form_for [@user, @workout] do |f| %>
-    <%= f.hidden_field%>
+<%= form_for @workout do |f| %>
     <%= f.label :name %>
-    
 
 
     <%= f.fields_for :routines do |r| %>
+        <%= r.hidden_field :id %>
+
         <h2> Select exercise </h2>
         <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
 

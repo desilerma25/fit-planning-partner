@@ -42,7 +42,7 @@ class WorkoutsController < ApplicationController
     private
 
     def workout_params
-        params.require(:workout).permit(:id, :user_id, :name, routines_attributes: [:reps, :sets, :exercise_id])
+        params.require(:workout).permit(:user_id, :name, routines_attributes: [:id, :reps, :sets, :exercise_id])
     end
 
     # def unauthorized_workout_user

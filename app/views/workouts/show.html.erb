@@ -6,8 +6,8 @@
     <%= w.exercise.name %> <%= w.sets %> X <%= w.reps %> <br>
     </li>
     <% end %>
-
-    <%= link_to "Edit", edit_workout_path(@workout)%>
+    <br>
+    <%= link_to "Add exercise routine", new_workout_routine_path(@workout) %><br><br>
     <%= link_to "Delete", workout_path(@workout), method: 'delete' %>
 
 

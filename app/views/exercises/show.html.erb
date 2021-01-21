@@ -12,9 +12,10 @@
     <%= @exercise.category %> 
     </li> 
 </ul>
+
+<% @exercise.workouts %>
+
 <!---
-DOES NOT WORK
-    <% if !current_user %>
-    <%= link_to "Edit Exercise", edit_exercise_path(@exercise) %>
-    <% end %>
+play with relationship above
+
 -->
