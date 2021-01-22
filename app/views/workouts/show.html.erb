@@ -1,4 +1,4 @@
-<h1> <%= current_user.name %>'s <%= @workout.name %> Workout </h1>
+<h1> <%= @workout.name %> Workout </h1>
 
 <ul> 
     <% @workout.routines.each do |w| %>
@@ -7,8 +7,11 @@
     </li>
     <% end %>
     <br>
+
+    <% if authorized_workout_user %>
     <%= link_to "Add exercise routine", new_workout_routine_path(@workout) %><br><br>
     <%= link_to "Delete", workout_path(@workout), method: 'delete' %>
+    <% end %>
 
 
 </ul>

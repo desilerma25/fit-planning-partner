@@ -35,6 +35,7 @@ class WorkoutsController < ApplicationController
 
     def destroy
         @workout = Workout.find(params[:id])
+        # unauthorized_workout_user
         @workout.destroy
         redirect_to workouts_path
     end

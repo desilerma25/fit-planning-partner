@@ -1,27 +1,11 @@
 <h1> Update your workout below: </h1>
 
-
+<%= @workout.name%>
 
 <%= form_for @workout do |f| %>
-    <%= f.label :name %>
 
-
-    <%= f.fields_for :routines do |r| %>
-        <%= r.hidden_field :id %>
-
-        <h2> Select exercise </h2>
-        <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
-
-        <%= r.label :sets %>
-        <%= r.number_field :sets %>
-
-        <%= r.label :reps %>
-        <%= r.number_field :reps %>
+    <%= render partial: 'routines', locals: { f: f } %>
     
-    <% end %>
-
-    <h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
-
     <%= f.submit "Update your workout" %>
 
 <% end %>
