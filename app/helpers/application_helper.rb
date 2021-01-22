@@ -8,4 +8,12 @@ module ApplicationHelper
         !!current_user
     end
 
+    def nav_bar_view
+        if logged_in? 
+         render 'layouts/logged_in' 
+       else 
+         render 'layouts/logged_out' 
+       end 
+    end
+
 end
