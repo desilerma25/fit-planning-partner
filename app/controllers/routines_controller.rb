@@ -20,8 +20,6 @@ class RoutinesController < ApplicationController
         @routines = @workout.routines 
     end
 
-
-
     private
 
     def routine_params

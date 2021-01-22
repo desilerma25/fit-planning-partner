@@ -9,9 +9,4 @@ include ApplicationHelper
         redirect_to "/" if !logged_in?
     end
 
-    # def unauthorized_user
-    #     !current_user
-    # end
-
-
 end

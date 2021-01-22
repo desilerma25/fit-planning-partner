@@ -1,16 +1,15 @@
+<%= f.fields_for :routines do |r| %>
+    <h2> Select exercise </h2>
+    <%= r.hidden_field :id %>
 
-    <%= f.fields_for :routines do |r| %>
-        <h2> Select exercise </h2>
-        <%= r.hidden_field :id %>
+    <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
 
-        <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
+    <%= r.label :sets %>
+    <%= r.number_field :sets %>
 
-        <%= r.label :sets %>
-        <%= r.number_field :sets %>
+    <%= r.label :reps %>
+    <%= r.number_field :reps %>
 
-        <%= r.label :reps %>
-        <%= r.number_field :reps %>
-    
-    <% end %>
+<% end %>
 
-    <h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
+<h4> Don't see an exercise you want? Create one <%= link_to "here", new_exercise_path %> </h4>
