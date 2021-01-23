@@ -1,8 +1,14 @@
-INDEX
+<h1> <%= @workout.name %> </h1>
+
+<p>
 <% @routines.each do |r| %>
 <li>
-    <%= r.exercise.name %>
-    <%= r.sets %>
-    <%= r.reps %>
+    <%= r.exercise.name %>: <%= r.sets %> x <%= r.reps %>
 </li>
 <% end %>
+
+
+<br> 
+<%= link_to "Add exercise routine", new_workout_routine_path(@workout) %><br><br>
+   
+<p>

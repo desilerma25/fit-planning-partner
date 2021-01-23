@@ -14,7 +14,7 @@ Specs:
 - [x] Include logout (through app)
 - [x] Include third party signup/login (Google OmniAuth2)
 - [x] Include nested resource show or index (URL e.g. users/2/workouts)
-- [x] Include nested resource "new" form (URL e.g. users/1/workouts/new)
+- [x] Include nested resource "new" form (URL e.g. workouts/1/routines/new)
 - [x] Include form display of validation errors
 
 Confirm:

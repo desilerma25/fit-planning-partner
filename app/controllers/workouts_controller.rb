@@ -1,6 +1,10 @@
 class WorkoutsController < ApplicationController
     before_action :redirect_if_not_logged_in
 
+    def index
+        @workouts = Workout.all
+    end
+
     def new
         @workout = Workout.new
         5.times { @workout.routines.build }
