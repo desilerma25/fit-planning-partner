@@ -27,10 +27,16 @@
     }
   
     /* --- Welcome Page Styles --- */
+    .navbar-brand {
+      /* display: flex; */
+
+    }
     
     body {
       /* background-image: url('../images/christmas_backdrop.jpg'); */
       /* background-size: cover; */
+      /* display: flex; */
+      background-color: #727cb8;
       color: #333;
       font-family: 'Georgia', Serif;
       font-size: 18px;
@@ -38,8 +44,9 @@
       padding: 2%;
     }
   
-    .wrapper {
-      background: rgb(80, 161, 98);
+    .container {
+      display: flexbox;
+      background: rgb(89, 146, 171);
       -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
       -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
       box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -110,6 +117,7 @@
       margin-top: 20px;
       padding-top: 20px;
       font-size: smaller;
+      
     }
   }
   
