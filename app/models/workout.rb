@@ -5,5 +5,6 @@ class Workout < ApplicationRecord
 
     accepts_nested_attributes_for :routines
 
+    validates :name, presence: true, uniqueness: true
 
 end

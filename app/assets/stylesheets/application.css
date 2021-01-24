@@ -30,8 +30,17 @@
     /* --- Welcome Page Styles --- */
     .navbar-brand {
       /* display: flex; */
-      align-items: center;
+      
+      word-spacing: 3px;
 
+    }
+
+    .btn-group button {
+      background-color: #76cec1; /* Green background */
+      border: 1px solid rgb(128, 0, 0); /* Green border */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
     }
     
     body {

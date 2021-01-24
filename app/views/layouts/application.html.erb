@@ -13,8 +13,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   
-  <div>
-    <a class="navbar-brand" href="<%= root_path %>"/>Home</a> |
+  <div class="btn-group">
+  
+    <button><a href="<%= root_path %>"/>Home</a> |</button>
     <%= nav_bar_view %>
   </div>
   </head>
