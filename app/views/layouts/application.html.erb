@@ -14,9 +14,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= nav_bar_view %>
+
+
+
   </head>
 
   <body>
+
     <br><br>
     	<div class="container">
 		  <% flash.each do |name, msg| %>
@@ -25,6 +29,7 @@
 		  <%= yield %>
      </div>
     <br><br>
+    
   </body>
 
   <footer class="branding">

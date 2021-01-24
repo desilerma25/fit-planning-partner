@@ -56,8 +56,20 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, header, hgroup, main, nav, section {
   display: block;
+}
+
+footer {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-color: black;
+  text-align: center;
 }
 
 body {
@@ -67,7 +79,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #839496;
-  text-align: left;
+  text-align: center;
   background-color: #002b36;
 }
 
@@ -230,6 +242,8 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 button {
@@ -253,6 +267,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  
 }
 
 button,
@@ -373,7 +388,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 60px;
 }
 
 h2, .h2 {
@@ -2169,6 +2184,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+  
 }
 
 .form-text {
@@ -2446,7 +2462,7 @@ textarea.form-control {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   -ms-flex-align: center;
-  align-items: center;
+  ;
 }
 
 .form-inline .form-check {
@@ -4267,6 +4283,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  text-align: center;
 }
 
 .nav-link {
@@ -10323,6 +10340,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    
   }
   .container {
     min-width: 992px !important;

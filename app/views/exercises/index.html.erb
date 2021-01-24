@@ -1,15 +1,21 @@
 <h1> Exercises </h1>
 
+<br><br>
+
+<form class="form-inline ">
 <%= form_tag("/exercises", method: "get") do %>
     <%= label_tag(:target_area, "Search by targeted muscle:") %>
     <%= text_field_tag(:target_area) %>
     <%= submit_tag("Search Exercises") %>
 <% end %>
+</form>
 
+<br><br>
 
 <% @exercises.each do |exercise| %>
-    <li>
+    <h4><li>
     <%= link_to "#{exercise.name}", exercise_path(exercise) %>
-    </li>
+    </li></h4>
 <% end %>
 
+  
