@@ -1,13 +1,15 @@
 <h1> Welcome <%= @user.name.titlecase %>! </h1> 
 
+<p>
 <% if @user.workouts.empty? %>
     <h3> You have not a created a workout yet </h3>
 <% else %>
-    <h3> Here are your created workouts: </h3>
+    <h3> Here are your created workouts: </h3> <br>
     <% @user.workouts.each do |uw| %>
-    <%= link_to "#{uw.name}", workout_path(uw) %>
+    <li><%= link_to "#{uw.name}", workout_path(uw) %></li>
     <% end %>
 <% end %>
+</p>
 
 <br>
-<%= link_to "Need some inspiration?", workouts_path %>
+<h5><%= link_to "Need some inspiration?", workouts_path %></h5>

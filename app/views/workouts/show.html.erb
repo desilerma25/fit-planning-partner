@@ -4,12 +4,13 @@
     <% @workout.routines.each do |w| %>
     <li>
     <%= w.exercise.name %> <%= w.sets %> X <%= w.reps %> <br>
-    </li>
+    </li><br>
     <% end %>
     <br>
 
     <% if authorized_workout_user %>
-    <%= link_to "Add exercise routine", new_workout_routine_path(@workout) %><br><br>
+    <%= link_to "Edit Workout", edit_workout_path %>
+    <%= link_to "Add Another Exercise", new_workout_routine_path(@workout) %><br><br>
     <%= link_to "Delete", workout_path(@workout), method: 'delete' %>
     <% end %>
 </ul>

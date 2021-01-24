@@ -1,6 +1,6 @@
-<button><a href="<%= new_exercise_path %>"/> New Exercise</a> |</button>
-<button><a href="<%= exercises_path %>"/> Exercises</a> |</button>
-<button><a href="<%= new_workout_path %>"/> New Workout</a> |</button>
-<button><a href="<%= workouts_path %>"/> All Workouts </a> |</button>
-<button><a href="<%= user_path(current_user) %>"/> <%="#{current_user.name.titlecase}'s Profile"%> </a> |</button>
+<button><a href="<%= new_exercise_path %>"/> New Exercise</a></button>
+<button><a href="<%= exercises_path %>"/> Exercises</a></button>
+<button><a href="<%= new_workout_path %>"/> New Workout</a></button>
+<button><a href="<%= workouts_path %>"/> All Workouts </a></button>
+<button><a href="<%= user_path(current_user) %>"/> <%="#{current_user.name.titlecase}'s Profile"%> </a></button>
 <button><a <%= link_to "Log Out", logout_path, method: 'delete' %></a> </button>

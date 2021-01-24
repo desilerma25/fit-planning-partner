@@ -14,7 +14,7 @@ class WorkoutsController < ApplicationController
         @workout = Workout.new(workout_params)
         @workout.user_id = current_user.id
         if @workout.save
-            redirect_to workouts_path(@workout)
+            redirect_to user_path(current_user)
         else
             render :new
         end

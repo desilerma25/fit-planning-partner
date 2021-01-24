@@ -27,7 +27,8 @@ gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 
-# gem 'bootstrap', '~> 5.0.0.beta1'
+
+gem 'bootstrap-sass', '3.3.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
