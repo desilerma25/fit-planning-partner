@@ -1,6 +1,45 @@
-<button><a href="<%= new_exercise_path %>"/> New Exercise</a></button>
-<button><a href="<%= exercises_path %>"/> Exercises</a></button>
-<button><a href="<%= new_workout_path %>"/> New Workout</a></button>
-<button><a href="<%= workouts_path %>"/> All Workouts </a></button>
-<button><a href="<%= user_path(current_user) %>"/> <%="#{current_user.name.titlecase}'s Profile"%> </a></button>
-<button><a <%= link_to "Log Out", logout_path, method: 'delete' %></a> </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="<%= root_path %>"/>Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%="#{current_user.name.titlecase}'s Profile"%></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="<%= user_path(current_user) %>"/> <%="#{current_user.name.titlecase}'s Page"%> </a>
+          <a class="dropdown-item" href="<%= link_to "Log Out", logout_path, method: 'delete'%>
+          
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exercise</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="<%= new_exercise_path %>"/>New Exercise</a>
+          <a class="dropdown-item" href="<%= exercises_path %>"/>Exercises</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Workout</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="<%= new_workout_path %>"/> New Workout</a>
+          <a class="dropdown-item" href="<%= workouts_path %>"/> All Workouts </a>
+        </div>
+      </li>
+
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

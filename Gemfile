@@ -31,6 +31,8 @@ gem 'omniauth-rails_csrf_protection'
 gem 'bootstrap-sass', '3.3.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+# gem 'bourbon'                                                                                                  
+# gem 'neat'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
