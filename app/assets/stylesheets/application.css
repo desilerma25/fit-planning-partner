@@ -22,6 +22,7 @@
     }
   
     html, body {
+      
       height: 100%;
       width: 100%;
     }
@@ -29,16 +30,16 @@
     /* --- Welcome Page Styles --- */
     .navbar-brand {
       /* display: flex; */
+      align-items: center;
 
     }
     
     body {
-      /* background-image: url('../images/christmas_backdrop.jpg'); */
-      /* background-size: cover; */
       /* display: flex; */
       background-color: #727cb8;
+      background-blend-mode: lighten;
       color: #333;
-      font-family: 'Georgia', Serif;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 18px;
       line-height: 25px;
       padding: 2%;
@@ -54,21 +55,22 @@
       max-width: 960px;
       padding: 2.25%; /* 18px / 800px */
       width: 85%;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
   
     h1 {
       border-bottom: 2px solid #ccc;
       font-size: 36px;
       line-height: 54px;
-      font-family: "Lucida Handwriting", cursive;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
   
     h2 {
-      font-family: 'Georgia', Serif;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       font-size: 24px;
       line-height: 36px;
       margin-bottom: 16px;
-      text-decoration: underline;
+      /* text-decoration: underline; */
     }
   
     h3 {
@@ -77,11 +79,11 @@
     }
   
     h5 {
-      font-family: 'Georgia', Serif;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
   
     p {
-      font-family: 'Georgia', Serif;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 17px;
       margin-bottom: 18px;
     }
@@ -96,7 +98,7 @@
     }
   
     .sidebar {
-      font-family: 'Georgia', Serif;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       background:rgba(158, 189, 130, 0.795);
       border: 1px solid #ccc;
       float: right;
@@ -121,6 +123,8 @@
     }
   }
   
+  /* Deals with media queries. Apply diff. styles for diff. media types/devices */
+
   @media screen and (max-width: 600px) {
     .wrapper {
       -moz-box-shadow: none;
