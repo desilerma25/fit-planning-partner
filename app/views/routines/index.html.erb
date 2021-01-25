@@ -1,14 +1,17 @@
 <h1> <%= @workout.name %> </h1>
 
-<p>
+<br>
+
 <% @routines.each do |r| %>
-<li>
-    <%= r.exercise.name %>: <%= r.sets %> x <%= r.reps %>
-</li>
+<h4>
+    <u><%= link_to "#{r.exercise.name}", exercise_path("#{r.exercise_id}")%>: </u>
+    <br>
+    <%= r.sets %> X <%= r.reps %><br>
+</h4>
+<br>
 <% end %>
 
 
 <br> 
 <%= link_to "Add exercise routine", new_workout_routine_path(@workout) %><br><br>
    
-<p>
