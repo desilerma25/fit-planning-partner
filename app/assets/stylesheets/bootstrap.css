@@ -51,12 +51,18 @@
 
 html {
   font-family: sans-serif;
-  line-height: 1.15;
+  font-size: 20px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, hgroup, nav, main, section {
+  display: block;
+}
+
+header {
+  position: fixed;
+  width: 100%;
   display: block;
 }
 
@@ -75,12 +81,13 @@ footer {
 body {
   margin: 0;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   color: #839496;
   text-align: center;
   background-color: #002b36;
+  
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -97,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
 
 p {
   margin-top: 0;
@@ -176,6 +184,8 @@ a {
   color: #2aa198;
   text-decoration: none;
   background-color: transparent;
+ 
+
 }
 
 a:hover {
@@ -267,6 +277,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border-radius: 7px;
   
 }
 
@@ -577,6 +588,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 25px;
 }
 
 @media (min-width: 576px) {
@@ -2462,7 +2474,7 @@ textarea.form-control {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   -ms-flex-align: center;
-  ;
+  text-align: center;
 }
 
 .form-inline .form-check {
@@ -2480,15 +2492,8 @@ textarea.form-control {
     margin-bottom: 0;
   }
   .form-inline .form-group {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 0;
+    
+
   }
   .form-inline .form-control {
     display: inline-block;
@@ -4284,6 +4289,7 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   list-style: none;
   text-align: center;
+  width: 100%;
 }
 
 .nav-link {
@@ -4371,15 +4377,19 @@ input[type="button"].btn-block {
 
 .navbar {
   position: relative;
-  display: -ms-flexbox;
+  display: inline-flex;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+  align-items: flex-start;
+  -ms-flex-pack:center;
+  justify-content: space-evenly;
+  /*
+  width: 100%;
+  padding-left: 35%;
+  padding-right: 25%;
+  */
 }
 
 .navbar .container,
@@ -4389,9 +4399,9 @@ input[type="button"].btn-block {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .navbar-brand {
@@ -10254,6 +10264,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-body {
   color: #839496 !important;
+  text-align: center;
 }
 
 .text-muted {
@@ -10340,10 +10351,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    text-align: center;
     
   }
   .container {
     min-width: 992px !important;
+  
   }
   .navbar {
     display: none;
