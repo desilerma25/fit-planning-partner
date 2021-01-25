@@ -1,11 +1,16 @@
 <h1> Update your workout below: </h1>
 
-<%= @workout.name%>
+<br>
 
 <%= form_for @workout do |f| %>
 
+   <h4> Name  <%= f.text_field :name %></h4>
+   <br>
+
     <%= render partial: 'routines', locals: { f: f } %>
     
+    <br>
+
     <%= f.submit "Update your workout" %>
 
 <% end %>

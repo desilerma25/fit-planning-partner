@@ -1,16 +1,19 @@
-<h1> Update your <%= @workout.name %> </h1>
-
+<h1> Update <%= @workout.name %> </h1>
+<br><br>
 <%= form_for [@workout, @routine] do |f|%>
  
 
- <h2> Select exercise to add to your workout </h2>
+ <h2> Select exercise to add to your workout: </h2>
+ <br>
+ <h4>
  <%= f.collection_select :exercise_id, Exercise.all, :id, :name %>
-
- <%= f.label :sets %>
+ <br><br>
+ Sets
  <%= f.number_field :sets %>
-
- <%= f.label :reps %>
+ <br><br>
+ Reps
  <%= f.number_field :reps %>
-
+</h4>
+<br>
  <%= f.submit "Add to workout" %>
 <% end %>

@@ -1,16 +1,17 @@
 <h1> New User Sign Up </h1>
-
+<br><br>
 <%= render '/layouts/errors', object: @user %>
 <%= form_for :user do |f| %>
-
-    <%= f.label :name %>
+<h4>
+    Name: <br>
     <%= f.text_field :name %>
-
-    <%= f.label :email %>
+<br><br>
+    Email: <br>
     <%= f.text_field :email %>
-
-    <%= f.label :password %>
+<br><br>
+    Password: <br>
     <%= f.password_field :password %>
-
+<br><br><br></h4>
     <%= f.submit "Create your account" %>
+
 <% end %>
