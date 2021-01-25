@@ -1,29 +1,31 @@
 <h1> Create a new exercise </h1>
+<br>
 
 <%= render '/layouts/errors', object: @exercise %>
 
-<form>
+
 <div class="form-group">
+
     <%= form_for @exercise do |f| %>
 
-
-    <%= f.label :name %>
+<h4>
+    Name:
     <%= f.text_field :name %>
     
     <br><br>
-    <%= f.label :target_area %>
+    Target Area:
     <%= f.collection_select :target_area, Exercise.unique_targets, :target_area, :target_area %>
  
     <br><br>
-    <%= f.label :category %>
+    Category:
     <%= f.collection_select :category, Exercise.unique_categories, :category, :category %>
-
+</h4>
     <br><br>
     <%= f.submit "Create your exercise!" %>
 
 <% end %>
 </div>
-</form>
+
 
   
 

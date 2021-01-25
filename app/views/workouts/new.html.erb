@@ -1,14 +1,16 @@
 <h1> Create your workout below: </h1>
 
+<br>
+
 <%= render '/layouts/errors', object: @workout %>
 
 <%= form_for [@user, @workout] do |f| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+   <h4> Name  <%= f.text_field :name %></h4>
+   <br>
 
     <%= render partial: 'routines', locals: { f: f } %>
-
+<br>
     <%= f.submit "Create your workout" %>
 
 <% end %>

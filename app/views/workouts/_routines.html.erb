@@ -1,14 +1,16 @@
 <%= f.fields_for :routines do |r| %>
-    <h2> Select exercise </h2>
+    <h5> Select exercise: 
     <%= r.hidden_field :id %>
 
     <%= r.collection_select :exercise_id, Exercise.all, :id, :name %>
-
+</h5><br>
     <%= r.label :sets %>
     <%= r.number_field :sets %>
 
     <%= r.label :reps %>
     <%= r.number_field :reps %>
+
+    <br><br>
 
 <% end %>
 

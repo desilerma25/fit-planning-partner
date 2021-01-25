@@ -1,29 +1,30 @@
-<h1> Exercise Info </h1>
-<ul>
-    <h3> Exercise: </h3> 
-    <%= @exercise.name %> 
-   
-
-    <br><br>
-
-     <h3> Target Muscle(s): </h3> 
-    <%= @exercise.target_area %>
-    
-
-    <br><br>
-
-     <h3> Category: </h3> 
-    <%= @exercise.category %> 
-    
-</ul>
+<h1> Exercise Information </h1>
 
 <br><br>
 
-<h4>This exercise is used in <%= @exercise.workouts.count %> workouts</h4>
+    <b><u><h3> Exercise: </h3></b></u>
+    <h5><%= @exercise.name %></h5>
 
-<br>
+    <br><br>
+
+     <b><u><h3> Target Muscle(s): </h3></b></u> 
+    <h5><%= @exercise.target_area %></h5>
+    
+
+    <br><br>
+
+     <b><u><h3> Category: </h3></b></u> 
+    <h5><%= @exercise.category %></h5>
+    
+
+
+<br><br>
+
+<h4>This exercise is currently used in <u><%= @exercise.workouts.count %></u> workout(s)</h4>
+
+
 <% @exercise.workouts.each do |e| %>
-<li>
-    <%= link_to "#{e.name}", workout_path(e) %> <br><br>
-</li>
+
+   <h5><i> <%= link_to "#{e.name}", workout_path(e) %> <br><br></h5></i>
+
 <% end %>
