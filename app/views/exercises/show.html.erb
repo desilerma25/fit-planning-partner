@@ -20,11 +20,11 @@
 
 <br><br>
 
-<h4>This exercise is currently used in <u><%= @exercise.workouts.count %></u> workout(s)</h4>
+<h4>This exercise is currently used in <u><%= @exercise.workouts.size %></u> workout(s)</h4>
 
 
 <% @exercise.workouts.each do |e| %>
 
-   <h5><i> <%= link_to "#{e.name}", workout_path(e) %> <br><br></h5></i>
+   <h5><i> <%= link_to "#{e.name}", workout_path(e) %> <br></h5></i>
 
 <% end %>
