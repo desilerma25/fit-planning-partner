@@ -1,4 +1,5 @@
 class RoutinesController < ApplicationController
+    before_action :redirect_if_not_logged_in
 
     def new
         @workout = Workout.find(params[:workout_id])
