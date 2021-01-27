@@ -13,6 +13,6 @@
 
     <% if authorized_workout_user %>
     <%= link_to "Edit Workout", edit_workout_path %><br>
-    <%= link_to "Add Another Exercise", new_workout_routine_path(@workout) %><br>
-    <%= link_to "Delete Workout", workout_path(@workout), method: 'delete' %>
+    <%= link_to "Add Another Exercise", new_workout_routine_path(@workout) %><br><br>
+    <%= button_to "Delete Workout", workout_path(@workout), method: 'delete' %>
     <% end %>
