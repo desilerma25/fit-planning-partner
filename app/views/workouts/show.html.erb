@@ -3,7 +3,7 @@
 
     <% @workout.routines.each do |w| %>
     <h4>
-    <u><%= link_to "#{w.exercise.name}", exercise_path("#{w.exercise_id}") %></u>
+    <u><%= link_to w.exercise.name, exercise_path(w.exercise_id) %></u>
     <br>
     <%= w.sets %> X <%= w.reps %> <br>
     </h4>

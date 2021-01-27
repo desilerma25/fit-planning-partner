@@ -27,6 +27,11 @@ class ExercisesController < ApplicationController
         end
     end
 
+    def most_popular
+        @exercises = Exercise.most_popular
+        render :index
+    end
+
     private 
 
     def exercise_params

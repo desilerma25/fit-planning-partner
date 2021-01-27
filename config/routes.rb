@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'sessions#home'
+  get '/exercises/most_popular', to: 'exercises#most_popular'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
-  resources :routines
+  # resources :routines
   resources :exercises
   resources :workouts do 
     resources :routines, shallow: true

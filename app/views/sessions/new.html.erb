@@ -4,18 +4,19 @@
 
 <h2> Already have an account? </h2>
 <br>
-<h4><%= form_for :user, url: login_path do |f| %>
-    Email:
-    <%= f.text_field :email %>
-<br><br>
-    Password:
-    <%= f.password_field :password %> </h4>
+<h4>
+    <%= form_for :user, url: login_path do |f| %>
+        Email:
+        <%= f.text_field :email %>
+        <br><br>
+        Password:
+        <%= f.password_field :password %>
 
-   <br>
+        <br>
 
-    <h5><%= f.submit "Log In" %></h5>
-<% end %>
-
+        <h5><%= f.submit "Log In" %></h5>
+    <% end %>
+</h4>
 <br><br><br>
 
 <h2>Or log in with your Google account: </h2>

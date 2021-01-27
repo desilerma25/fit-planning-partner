@@ -9,4 +9,6 @@ class Exercise < ApplicationRecord
     scope :order_by_name, -> { order("lower(name) ASC") }
     scope :unique_targets, -> { select(:target_area).distinct }
     scope :unique_categories, -> { select(:category).distinct }
+    scope :most_popular, -> { joins(:routines).group(:id).order("COUNT(exercise_id) DESC").limit(3)}
+
 end
